@@ -1,0 +1,28 @@
+const { gotScraping } = require('got-scraping');
+const cheerio = require('cheerio');
+
+(async () => {
+    const targetUrl = 'https://zoek.officielebekendmakingen.nl/zoeken'; // Voorbeeld
+
+    try {
+        const response = await gotScraping({
+            url: targetUrl,
+            // Header generator zit ingebouwd om TLS fingerprint te maskeren
+        });
+
+        const html = response.body;
+        const $ = cheerio.load(html);
+
+        // Analyseer de HTML
+        const text = $('body').text();
+        console.log('Status Code:', response.statusCode);
+        
+        // Zoek naar de speld in de hooiberg
+        if (text.includes('Barendrecht')) {
+            console.log('Connectie succesvol, content wordt geanalyseerd...');
+        }
+
+    } catch (error) {
+        console.log('Geblokkeerd of fout:', error.message);
+    }
+})();
