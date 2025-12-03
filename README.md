@@ -1,4 +1,4 @@
-et lijkt erop dat u de diepte in wilt gaan om die digitale sporen (notulen, besluitenlijsten, aanbestedingsdocumenten) zelf boven water te halen, maar dat u tegen beveiligingen aanloopt.
+Het lijkt erop dat u de diepte in wilt gaan om die digitale sporen (notulen, besluitenlijsten, aanbestedingsdocumenten) zelf boven water te halen, maar dat u tegen beveiligingen aanloopt.
 
 Overheidssites en raadsinformatiesystemen (zoals iBabs, Notubiz of portals van gemeenten als Barendrecht) zijn tegenwoordig vaak beveiligd met TLS Fingerprinting (JA3 hashes) en laden content dynamisch via JavaScript. Een simpele 'fetch' of 'curl' werkt dan niet; u wordt geblokkeerd of krijgt een lege pagina.
 
